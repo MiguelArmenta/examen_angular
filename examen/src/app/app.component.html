@@ -1,0 +1,6 @@
+<app-form-alumno (agregarAlumnoEvent)="agregarAlumno($event)"></app-form-alumno>
+<app-lista-alumnos [alumnos]="alumnos" (editarAlumnoEvent)="editarAlumno($event)" (eliminarAlumnoEvent)="eliminarAlumno($event)"></app-lista-alumnos>
+<app-lista-grupos *ngIf="actualizar" [alumnos]="alumnos"></app-lista-grupos>
+<app-lista-grupos *ngIf="!actualizar" [alumnos]="alumnos"></app-lista-grupos>
+
+<router-outlet></router-outlet>

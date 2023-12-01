@@ -1,0 +1,21 @@
+
+<table>
+  <tr>
+    <th>Grupo</th>
+    <th>No. Cuenta</th>
+    <th>Nombre</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <tr *ngFor="let alumno of alumnos; let i = index">
+    <td><input [(ngModel)]="alumno.grupo" /></td>
+    <td><input [(ngModel)]="alumno.cuenta" /></td>
+    <td><input [(ngModel)]="alumno.nombre" /></td>
+
+
+    <td><button (click)="editarAlumno(i, alumno)">Editar</button></td>
+    <td><button (click)="eliminarAlumno(i)">Eliminar</button></td>
+  </tr>
+
+</table>
